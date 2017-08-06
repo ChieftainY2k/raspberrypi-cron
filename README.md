@@ -23,6 +23,8 @@ $ git clone https://github.com/ChieftainY2k/raspberrypi-cron
 $ cd raspberrypi-cron
 </pre>
  
+* Edit the cron runner file **docker/cron-runner.sh** to suit your needs
+ 
 * Build docker image for the "camera" container
 <pre>
 $ docker build -t cronimage ./docker 
