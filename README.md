@@ -39,6 +39,7 @@ Note: cron container will restart automatically on reboot or failure unless you 
 <pre>
 $ docker logs -f croncontainer
 </pre>
+Note: if you see "tail: unrecognized file system type" error, just ignore it.
 
 * Stop the container (may take a while)
 <pre>
@@ -59,4 +60,5 @@ $ docker attach croncontainer
 <pre>
 $ docker rm -f croncontainer
 </pre>
+
 
