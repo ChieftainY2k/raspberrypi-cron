@@ -5,7 +5,6 @@ The app was tested against Raspberry Pi A and Raspberry Pi 2
 * Get Raspberry PI
 * Install Jessie image and configure it so that it can connect to the internet
 * Update firmware (rpi-update) and software (apt-get update && at-get upgrade)
-* Make sure camera module is enabled (raspi-config)
 * Install docker
 <pre>
 $ curl -sSL get.docker.com | sh
@@ -25,7 +24,7 @@ $ cd raspberrypi-cron
  
 * Edit the cron runner file **docker/cron-runner.sh** to suit your needs
  
-* Build docker image for the "camera" container
+* Build docker image for the cron container
 <pre>
 $ docker build -t cronimage ./docker 
 </pre>
