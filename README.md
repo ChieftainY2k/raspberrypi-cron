@@ -1,6 +1,6 @@
 Sometimes it's best to run cron and cron job (with own cronfile) in a separate docker container. This is an example how to run cron script inside raspberry pi docker container.
 
-The app was tested against Raspberry Pi A and Raspberry Pi 2 
+The app was tested on Raspberry Pi A 
 
 * Get Raspberry PI
 * Install Jessie image and configure it so that it can connect to the internet
