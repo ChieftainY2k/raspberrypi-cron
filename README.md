@@ -20,7 +20,7 @@ $ git clone https://github.com/ChieftainY2k/raspberrypi-cron
  
 * Goto repo directory
 <pre>
-$ cd raspberrypi-video-streamer
+$ cd raspberrypi-cron
 </pre>
  
 * Build docker image for the "camera" container
@@ -33,6 +33,11 @@ $ docker build -t cronimage ./docker
 $ docker run --detach --restart unless-stopped --name croncontainer cronimage
 </pre>
 Note: cron container will restart automatically on reboot or failure unless you stop it with the "docker stop" command. 
+
+* Show and follow container logs (press ctrl-c to break)
+<pre>
+$ docker logs -f croncontainer
+</pre>
 
 * Stop the container (may take a while)
 <pre>
@@ -52,10 +57,5 @@ $ docker attach croncontainer
 * Kill cron process and remove container
 <pre>
 $ docker rm -f croncontainer
-</pre>
-
-* Show container logs
-<pre>
-$ docker logs croncontainer
 </pre>
 
