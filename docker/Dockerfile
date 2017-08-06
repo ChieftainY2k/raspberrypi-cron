@@ -9,6 +9,9 @@ RUN touch /var/log/cron-runner.log
 RUN apt-get update
 RUN apt-get -y install cron
 
+WORKDIR /
+COPY /etc/timezone /etc/timezone
+
 WORKDIR /root/
 COPY cron-starter.sh .
 COPY cron-runner.sh .
