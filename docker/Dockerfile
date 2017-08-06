@@ -17,3 +17,5 @@ RUN chmod u+x cron-runner.sh
 
 CMD ["./cron-starter.sh"]
 #ENTRYPOINT ["./cron-starter.sh"]
+
+VOLUME /etc/timezone

@@ -31,7 +31,7 @@ $ docker build -t cronimage ./docker
  
 * Initiate and run cron container
 <pre>
-$ docker run --detach --restart unless-stopped --name croncontainer cronimage
+$ docker run -v /etc/localtime:/etc/localtime:ro -v /etc/timezone:/etc/timezone:ro --detach --restart unless-stopped --name croncontainer cronimage
 </pre>
 Note: cron container will restart automatically on reboot or failure unless you stop it with the "docker stop" command. 
 
